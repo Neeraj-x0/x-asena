@@ -25,12 +25,11 @@ module.exports = {
       : "^[,]",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
-  PACKNAME: process.env.PACKNAME || "X-asena",
+  STICKER_PACKNAME: process.env.STICKER_PACKNAME || 'X-Asena,X-Electra',
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
     "{pp}Hi @user Welcome to @gname\nYou're our @count/513 Members ",
   GOODBYE_MSG: process.env.GOODBYE_MSG || "Hi @user It was Nice Seeing you",
-  AUTHOR: process.env.AUTHOR || "X-electra",
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"

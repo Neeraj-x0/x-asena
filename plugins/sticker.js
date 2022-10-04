@@ -13,9 +13,11 @@ command(
     if (!(message.reply_message.video || message.reply_message.image))
       return await message.reply("_Reply to photo or video_");
     let buff = await m.quoted.download();
-    message.sendMessage(
+    let [p, a] = match.split(",");
+    let [s, n] = config.STICKER_PACKNAME.split(",");
+    await message.sendMessage(
       buff,
-      { packname: config.PACKNAME, author: config.AUTHOR },
+      { packname: p || s, author: a || n },
       "sticker"
     );
   }
@@ -71,12 +73,13 @@ command(
     if (!message.reply_message && !message.reply_message.sticker)
       return await message.reply("_Reply to sticker_");
     let buff = await m.quoted.download();
-    let [packname, author] = match.split(",");
+    let [p, a] = match.split(",");
+    let [s, n] = config.STICKER_PACKNAME.split(",");
     await message.sendMessage(
       buff,
       {
-        packname: packname || config.PACKNAME,
-        author: author || config.AUTHOR,
+        packname: p || a,
+        author: s || n,
       },
       "sticker"
     );

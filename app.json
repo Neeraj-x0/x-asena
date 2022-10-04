@@ -28,22 +28,13 @@
       "required": false,
       "value": ""
     },
-    "HANDLERS": {
-      "description": "prefix for commands, enter false for no prefix",
-      "required": false,
+    "STICKER_PACKNAME": {
+      "description": "sticker pack info",
+      "required": true,
       "value": ""
     },
-    "PACKNAME": {
-      "description": "Sticker Packname",
-      "required": false
-    },
-
     "GOODBYE_MSG": {
       "description": "goodbye Message",
-      "required": false
-    },
-    "AUTHOR": {
-      "description": "Sticker Pack AUTHOR",
       "required": false
     },
     "SUDO": {

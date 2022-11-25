@@ -38,6 +38,9 @@ PLUGIN CONTENT HERE
 
 
 */
+
+message.sendMessage("```Ping!```"); //Send Text Message to The Chat
+
   }
 );
 
